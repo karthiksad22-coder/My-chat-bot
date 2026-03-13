@@ -1,0 +1,91 @@
+/* history item layout */
+
+.history-item{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:8px 10px;
+border-radius:10px;
+cursor:pointer;
+position:relative;
+}
+
+/* hover effect */
+
+.history-item:hover{
+background:rgba(255,255,255,0.1);
+}
+
+/* text inside history */
+
+.history-text{
+flex:1;
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+}
+
+/* three dots button */
+
+.menu-btn{
+font-size:18px;
+padding:2px 8px;
+border-radius:6px;
+cursor:pointer;
+user-select:none;
+opacity:0.8;
+}
+
+/* show stronger on hover */
+
+.menu-btn:hover{
+background:rgba(255,255,255,0.25);
+opacity:1;
+}
+
+/* dropdown menu */
+
+.dropdown{
+position:absolute;
+background:white;
+color:black;
+border-radius:10px;
+padding:8px 0;
+width:210px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+z-index:9999;
+animation:fadeMenu 0.15s ease;
+}
+
+/* dropdown items */
+
+.dropdown div{
+padding:10px 16px;
+cursor:pointer;
+font-size:14px;
+}
+
+/* hover menu item */
+
+.dropdown div:hover{
+background:#f3f3f3;
+}
+
+/* delete item style */
+
+.dropdown .delete{
+color:#e53935;
+}
+
+/* dropdown animation */
+
+@keyframes fadeMenu{
+from{
+opacity:0;
+transform:translateY(-5px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
